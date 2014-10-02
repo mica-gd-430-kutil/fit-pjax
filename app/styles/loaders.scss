@@ -36,6 +36,8 @@
    § Full Page Loader
    ========================================================================== */
 .full {
+
+  // Pace Container
   .pace {
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -43,6 +45,8 @@
             pointer-events: none;
 
     -webkit-pointer-events: none;
+
+    // Defaults for progress bar
     .pace-progress {
       position: fixed;
       top: 0;
@@ -55,18 +59,28 @@
            -o-transition: width .25s;
               transition: width .25s;
     }
-  }
-  &.pace-running {
-    .pace-progress {
+
+    // When Running
+    &.pace-active {
       opacity: 1;
     }
+
+    // When Done
+    &.pace-inactive {
+      opacity: 0;
+    }
+  }
+
+  &.pace-running {
     .page {
-      opacity: 0;
+      opacity: 0 !important;
     }
   }
-  &.pace-inactive {
-    .pace-progress {
-      opacity: 0;
+
+  &.pace-done {
+    .page {
+      opacity: 1 !important;
     }
   }
+
 }

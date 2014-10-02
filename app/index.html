@@ -23,7 +23,7 @@
     <!-- endbuild -->
 
   </head>
-  <body class="default">
+  <body class="full">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -44,7 +44,7 @@
         <p>Last week we looked at how <a href="http://legworkstudio.com">Legwork</a> used a page loader to show progress in loading content into the page.</p>
         <p>We looked at a basic plugin called <a href="http://pjax.heroku.com">pJax</a>, which is a very basic implementation of using <code>AJAX</code> to load content from one page into another.</p>
 
-        <p>In our example today, I&rsquo;m using a plugin called <a href="http://github.hubspot.com/pace/">PACE</a>, and a </p>
+        <p>In our example today, I&rsquo;m using a plugin called <a href="http://github.hubspot.com/pace/">PACE</a>, and a custom script I borrowed from <a href="https://github.com/browserstate/ajaxify">BrowserState</a></p>
       </main>
     </div><!-- /.container -->
 
@@ -55,23 +55,12 @@
     <script src="bower_components/pace/pace.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <!-- endbower -->
-    <script src="http://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
-    <script src="http://rawgit.com/browserstate/ajaxify/master/ajaxify-html5.js"></script>
     <!-- endbuild -->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <script src="http://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/ajaxify.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
     <script>
       $(function () {
         var now = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
