@@ -1,0 +1,212 @@
+/*
+* TOC
+*
+* Transitons
+* Colors
+* Basic Text Styling
+* Grid Object
+* Menu Object
+* Basic Page Layout
+* Large Page Layout
+*/
+
+
+/* ==========================================================================
+   § Transitons
+   http://easings.net
+   http://cubic-bezier.com/
+   ========================================================================== */
+// http://easings.net/#easeInOutExpo
+%easeInOutExpo {
+  transition: all .3s cubic-bezier(.17,.67,.83,.67);
+}
+
+/* ==========================================================================
+   § Colors
+   ========================================================================== */
+$navy: #001f3f;
+
+$black: #212121;
+
+$yellow: #ffdc00;
+
+/* ==========================================================================
+   § Basic Text Styling
+   Borrowed from http://www.gridlover.net/app/
+   ========================================================================== */
+body {
+  font-size: 16px;
+  line-height: 20px;
+}
+h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 31px;
+  line-height: 40px;
+}
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  line-height: 40px;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 20px;
+}
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Sanitation */
+hr {
+  margin: -1px 0;
+  border: 1px solid;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b,
+strong,
+em,
+small,
+code {
+  line-height: 1;
+}
+sup,
+sub {
+  position: relative;
+  top: -.4em;
+  vertical-align: baseline;
+}
+sub {
+  top: .4em;
+}
+
+
+
+
+
+/* ==========================================================================
+   § Grid Object
+   ========================================================================== */
+.items.justify {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: justify;
+  list-style: none;
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+  }
+  .item,
+  .ph {
+    display: inline-block;
+  }
+  .item {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
+.ui.items.four {
+  .item,
+  .ph {
+    width: 24%;
+    margin-bottom: 1%;
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   § Menu Object
+   ========================================================================== */
+.menu {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  list-style: none;
+  .item {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   § Basic Page Layout
+   ========================================================================== */
+.container {
+  width: 40em;
+  margin: 0 auto;
+}
+
+.ui.masthead {
+  padding: 2em 0;
+  color: #fff;
+  background: $navy;
+  .menu {
+    .item {
+      margin-left: 1em;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    .link {
+      padding: 6px;
+      line-height: 1;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 4px;
+
+      @extend %easeInOutExpo;
+      &:hover,
+      &:focus {
+        color: $yellow;
+        background-color: darken($navy, 5%);
+      }
+    }
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   § Large Page Layout
+   ========================================================================== */
+.page {
+  @extend %easeInOutExpo;
+}

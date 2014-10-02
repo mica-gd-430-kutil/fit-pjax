@@ -1,0 +1,13 @@
+{
+  "name": "fit-pjax",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "modernizr": "~2.8.2",
+    "pace": "~0.5.7",
+    "normalize-css": "~3.0.1",
+    "moment": "~2.8.3",
+    "jquery-pjax": "~1.9.2"
+  },
+  "devDependencies": {}
+}
