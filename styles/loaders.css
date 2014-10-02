@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*
+* TOC
+*
+* Minimal Loader
+* Full Page Loader
+*/
+
+
+
+
+
+/* ==========================================================================
+   § Minimal Loader
+   ========================================================================== */
+.default .pace .pace-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 2px;
+  background: #29d;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
+}
+.default .pace.pace-inactive {
+  display: none;
+}
+
+
+
+
+
+/* ==========================================================================
+   § Full Page Loader
+   ========================================================================== */
+.full .pace {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  -webkit-pointer-events: none;
+}
+.full .pace .pace-progress {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #ee3148;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+.full .pace.pace-active {
+  opacity: 1;
+}
+.full .pace.pace-inactive {
+  opacity: 0;
+}
+.full.pace-running .page {
+  opacity: 0 !important;
+}
+.full.pace-done .page {
+  opacity: 1 !important;
+}
+
+

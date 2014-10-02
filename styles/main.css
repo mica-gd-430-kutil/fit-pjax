@@ -1,0 +1,199 @@
+/*
+* TOC
+*
+* Transitons
+* Colors
+* Basic Text Styling
+* Grid Object
+* Menu Object
+* Basic Page Layout
+* Large Page Layout
+*/
+
+
+
+
+
+/* ==========================================================================
+   § Transitons
+   http://easings.net
+   http://cubic-bezier.com/
+   ========================================================================== */
+.link, .page {
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+
+
+
+
+/* ==========================================================================
+   § Basic Text Styling
+   Borrowed from http://www.gridlover.net/app/
+   ========================================================================== */
+body {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 31px;
+  line-height: 40px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Sanitation */
+hr {
+  margin: -1px 0;
+  border: 1px solid;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+b,
+strong,
+em,
+small,
+code {
+  line-height: 1;
+}
+
+sup,
+sub {
+  position: relative;
+  top: -.4em;
+  vertical-align: baseline;
+}
+
+sub {
+  top: .4em;
+}
+
+
+
+
+
+/* ==========================================================================
+   § Grid Object
+   ========================================================================== */
+.items.justify {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: justify;
+  list-style: none;
+}
+.items.justify:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+.items.justify .item,
+.items.justify .ph {
+  display: inline-block;
+}
+.items.justify .item {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.ui.items.four .item,
+.ui.items.four .ph {
+  width: 24%;
+  margin-bottom: 1%;
+}
+
+
+
+
+
+/* ==========================================================================
+   § Menu Object
+   ========================================================================== */
+.menu {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  list-style: none;
+}
+.menu .item {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+
+
+
+/* ==========================================================================
+   § Basic Page Layout
+   ========================================================================== */
+.container {
+  width: 40em;
+  margin: 0 auto;
+}
+
+.ui.masthead {
+  padding: 2em 0;
+  color: #fff;
+  background: #001f3f;
+}
+.ui.masthead .menu .item {
+  margin-left: 1em;
+}
+.ui.masthead .menu .item:first-child {
+  margin-left: 0;
+}
+.ui.masthead .menu .link {
+  padding: 6px;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+}
+.ui.masthead .menu .link:hover, .ui.masthead .menu .link:focus {
+  color: #ffdc00;
+  background-color: #001226;
+}

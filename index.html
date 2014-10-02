@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>fit pjax</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/loaders.css -->
+    <link rel="stylesheet" href="styles/loaders.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body class="full">
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="ui masthead">
+      <div class="container">
+        <nav class="ui menus primary">
+          <ul class="menu">
+            <li class="item"><a class="link" href="index.html">Home</a></li>
+            <li class="item"><a class="link" href="large.html">Large Page</a></li>
+          </ul>
+        </nav>
+        <time id="time"></time>
+      </div>
+    </div>
+    <div class="page container ui" id="content">
+      <main class="entry h-entry">
+        <h1 class="heading">Loading Pages via Ajax</h1>
+        <p>Last week we looked at how <a href="http://legworkstudio.com">Legwork</a> used a page loader to show progress in loading content into the page.</p>
+        <p>We looked at a basic plugin called <a href="http://pjax.heroku.com">pJax</a>, which is a very basic implementation of using <code>AJAX</code> to load content from one page into another.</p>
+
+        <p>In our example today, I&rsquo;m using a plugin called <a href="http://github.hubspot.com/pace/">PACE</a>, and a custom script I borrowed from <a href="https://github.com/browserstate/ajaxify">BrowserState</a></p>
+      </main>
+    </div><!-- /.container -->
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/pace/pace.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="http://browserstate.github.io/history.js/scripts/bundled/html4+html5/jquery.history.js"></script>
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/ajaxify.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script>
+      $(function () {
+        var now = moment().format('dddd, MMMM Do YYYY, h:mm:ss a');
+        $('#time').append(now);
+      });
+    </script>
+</body>
+</html>
